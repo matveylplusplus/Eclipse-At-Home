@@ -1,0 +1,10 @@
+package cmsc131;
+
+import java.util.Scanner;
+
+public class Grade 
+{
+	int gr;
+	Scanner io = new Scanner(System.in);
+	gr = io.Next();
+}

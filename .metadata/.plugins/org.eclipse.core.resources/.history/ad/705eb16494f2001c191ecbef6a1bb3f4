@@ -1,0 +1,9 @@
+package cmsc131;
+
+public class IntUntilNegat 
+{
+	public static void main(String[] args)
+	{
+		
+	}
+}

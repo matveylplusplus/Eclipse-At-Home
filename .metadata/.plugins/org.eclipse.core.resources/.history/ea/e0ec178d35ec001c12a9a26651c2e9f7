@@ -1,0 +1,22 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		
+	}
+}
+
+class pizdec
+{
+	int age;
+	String name;
+	
+	public pizdec(int i, String n)
+	{
+		age = i;
+		name = n;
+	}
+}
+

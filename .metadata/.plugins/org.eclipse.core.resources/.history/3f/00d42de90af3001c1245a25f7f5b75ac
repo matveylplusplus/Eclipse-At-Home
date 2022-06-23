@@ -1,0 +1,17 @@
+package cmsc131;
+
+import java.util.Scanner;
+
+public class AddToN 
+{
+	public static void main(String[] args)
+	{
+		System.out.println(doStuff(3));
+	}
+	
+	public static int doStuff(int n) 
+	{
+	   if (n<1) return n;
+	   return 2*n + doStuff(n-1);
+	} 
+}

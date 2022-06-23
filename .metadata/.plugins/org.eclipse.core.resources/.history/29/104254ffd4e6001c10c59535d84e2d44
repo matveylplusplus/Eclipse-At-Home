@@ -1,0 +1,38 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		String p = "lmfaoooo";
+		pizdec lol = new pizdec(45, "Thomas");
+		System.out.println(p);
+		System.out.println(lol.age);
+		foo(p);
+		foo(lol);
+		System.out.println(p);
+		System.out.println(lol.age);
+	}
+	
+	static void foo(String a)
+	{
+		a = "fuckimn";
+	}
+	
+	static void foo(pizdec po)
+	{
+		po.age = 12;
+	}
+}
+
+class pizdec
+{
+	int age;
+	String name;
+	
+	public pizdec(int i, String n)
+	{
+		age = i;
+		name = n;
+	}
+}

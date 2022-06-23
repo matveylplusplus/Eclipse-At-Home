@@ -1,0 +1,11 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		StringBuffer nString = new StringBuffer("Hello");
+		nString.append("There");
+		System.out.println(nString);
+	}
+}

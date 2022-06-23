@@ -1,0 +1,75 @@
+package test;
+
+import java.util.Scanner;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter a type of pet loool: ");
+		String petType = in.next();
+		System.out.println("");
+		
+		if(petType.equals("dog"))
+		{
+			int eaten = howManyCEaten(in);
+			report(petType, eaten, 0);
+			
+		}
+		else if (petType.equals("cat"))
+		{
+			int scratched = howManyDScratched(in);
+			report(petType, 0, scratched);
+		}
+		else if (petType.equals("cockatiel"))
+		{
+			int eaten = howManyCEaten(in);
+			int scratched = howManyDScratched(in);
+			report(petType, eaten, scratched);
+		}
+		else// no further questions
+		{
+			System.out.println("No further questions!");
+		}
+		in.close();
+	}
+	
+	private static int howManyCEaten(Scanner in)
+	{
+		int eaten = 0;
+		System.out.print("How many cats has your pet eaten?");
+		eaten = in.nextInt();
+		System.out.println("");
+		return eaten;
+	}
+	
+	private static int howManyDScratched(Scanner in)
+	{
+		int scratched = 0;
+		System.out.print("How many dogs has your pet scratched?");
+		scratched = in.nextInt();
+		System.out.println("");
+		return scratched;
+	}
+	
+	private static void report(String petType, int C, int D)
+	{
+		System.out.println("Species: " + petType);
+		System.out.println("Number of cats eaten: " + C);
+		System.out.println("Number of dogs scratched: " + D);
+	}
+}
+
+class pizdec
+{
+	int age;
+	String name;
+	
+	public pizdec(int i, String n)
+	{
+		age = i;
+		name = n;
+	}
+}
+

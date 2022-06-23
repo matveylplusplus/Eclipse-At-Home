@@ -1,0 +1,9 @@
+package cmsc131;
+
+import java.util.Scanner;
+
+public class Avg10 
+{
+	int[] arr = new int[10];
+	Scanner io = new Scanner(System.in);
+}

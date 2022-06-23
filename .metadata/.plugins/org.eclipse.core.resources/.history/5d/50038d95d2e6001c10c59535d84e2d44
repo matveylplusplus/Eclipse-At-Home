@@ -1,0 +1,15 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		String nString = new String("Hello");
+		nString += "There";
+		System.out.println(nString);
+		
+		StringBuffer nStringB = new StringBuffer("Hello");
+		nStringB.append("There");
+		System.out.println(nStringB);
+	}
+}

@@ -1,0 +1,16 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		System.out.println(((3<5) && !(1>14) && (-5<-15)) || ((6==6) && !(2==2)));
+		System.out.println("3 < 5 = " + (3<5));
+		System.out.println("!(1>14) = " + (!(1>14)));
+		System.out.println("(-5<-15) = " + ((-5<-15)));
+		System.out.println("(6==6) = " + (6==6));
+		System.out.println("!(2==2) = " + !(2==2));
+		
+		System.out.println(((3<5) && !(1>14) && (-5<-15)) || ((6==6) && !(2==2)));
+	}
+}

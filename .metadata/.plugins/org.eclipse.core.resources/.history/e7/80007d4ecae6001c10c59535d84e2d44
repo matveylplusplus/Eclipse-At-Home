@@ -1,0 +1,9 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		System.out.println(((3<5) && !(1>14) && (-5<-15)) || ((6==6) && !(2==2)));
+	}
+}

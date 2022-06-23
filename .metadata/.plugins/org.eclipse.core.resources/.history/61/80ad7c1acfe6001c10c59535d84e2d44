@@ -1,0 +1,11 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		String x = "my pepeeepep";
+		String y = new String("my pepeeepepe");
+		System.out.println(x == y);
+	}
+}

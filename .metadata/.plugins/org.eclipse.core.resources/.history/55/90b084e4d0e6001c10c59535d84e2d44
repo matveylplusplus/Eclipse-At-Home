@@ -1,0 +1,12 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		int i = 6;
+		int j = 1;
+		String str = "Hello" + (i + j) + "There";
+		System.out.println(str);
+	}
+}

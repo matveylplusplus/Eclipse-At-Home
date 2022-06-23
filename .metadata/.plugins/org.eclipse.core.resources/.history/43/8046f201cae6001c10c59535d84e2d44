@@ -1,0 +1,9 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		System.out.println(75 % 7);
+	}
+}

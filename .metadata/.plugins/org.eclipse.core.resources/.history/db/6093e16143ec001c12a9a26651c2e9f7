@@ -1,0 +1,39 @@
+package test;
+
+import java.util.Scanner;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		Scanner in = new Scanner(System.in);
+		System.out.print("Please enter a temperature: ");
+		double temp = in.nextDouble();
+		System.out.println("");
+		
+		System.out.print("Farenheit(F) or Celsius(C)?");
+		String tempT = in.next();
+		
+		if(tempT.equals("C"))
+		{
+			
+		}
+		else if (tempT.equals("F"))
+		{
+			
+		}
+	}
+}
+
+class pizdec
+{
+	int age;
+	String name;
+	
+	public pizdec(int i, String n)
+	{
+		age = i;
+		name = n;
+	}
+}
+

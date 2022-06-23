@@ -1,0 +1,21 @@
+package cmsc131;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class IntUntilNegat 
+{
+	public static void main(String[] args)
+	{
+		Scanner io = new Scanner (System.in);
+		ArrayList listy = new ArrayList();
+		
+		int justAdded = 1;
+		
+		while(justAdded > 0)
+		{
+			System.out.print("Enter a value: ");
+			justAdded = io.nextInt();
+		}
+	}
+}

@@ -1,0 +1,11 @@
+package cmsc131;
+
+import java.util.Scanner;
+
+public class IntUntilNegat 
+{
+	public static void main(String[] args)
+	{
+		Scanner io = new Scanner (System.in);
+	}
+}

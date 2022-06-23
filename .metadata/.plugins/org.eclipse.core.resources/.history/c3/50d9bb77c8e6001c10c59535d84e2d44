@@ -1,0 +1,9 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		int x = 34.7;
+	}
+}

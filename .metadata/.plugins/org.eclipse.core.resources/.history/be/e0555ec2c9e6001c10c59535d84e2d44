@@ -1,0 +1,12 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		int x = 9 - 15 * 6 / 11 + 4;
+		double y = 9.0 - 15.0 * 6.0 / 11.0 + 4.0;
+		System.out.println(x);
+		System.out.println(y);
+	}
+}

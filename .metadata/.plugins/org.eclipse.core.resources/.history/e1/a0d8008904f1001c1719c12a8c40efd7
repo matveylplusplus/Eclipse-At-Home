@@ -1,0 +1,9 @@
+package cmsc131;
+
+import java.util.Scanner;
+
+public class Grade 
+{
+	Scanner io = new Scanner(System.in);
+	
+}

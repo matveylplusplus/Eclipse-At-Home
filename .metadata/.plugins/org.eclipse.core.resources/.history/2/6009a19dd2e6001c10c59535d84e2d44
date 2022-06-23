@@ -1,0 +1,15 @@
+package test;
+
+public class Gen 
+{
+	public void main (String[] Args)
+	{
+		String p = "lmfaoooo";
+		foo(p);
+	}
+	
+	void foo(String a)
+	{
+		
+	}
+}

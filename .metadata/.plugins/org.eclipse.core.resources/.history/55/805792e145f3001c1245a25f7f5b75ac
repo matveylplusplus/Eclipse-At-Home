@@ -1,0 +1,21 @@
+package test;
+
+import java.util.Scanner;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		Scanner in = new Scanner(System.in);
+		in.close();
+	}
+}
+
+class pizdec
+{
+	public pizdec()
+	{
+
+	}
+}
+

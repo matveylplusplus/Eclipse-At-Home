@@ -1,0 +1,27 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		StringBuffer s = new StringBuffer("Hello");
+		System.out.println(s.capacity());
+		s = new StringBuffer("HelloThere");
+		System.out.println(s.capacity());
+		s = new StringBuffer("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+		System.out.println(s.capacity());
+	}
+}
+
+class pizdec
+{
+	int age;
+	String name;
+	
+	public pizdec(int i, String n)
+	{
+		age = i;
+		name = n;
+	}
+}
+

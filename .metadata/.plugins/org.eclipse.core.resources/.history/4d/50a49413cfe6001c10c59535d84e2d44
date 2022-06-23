@@ -1,0 +1,13 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		String x = "my pepeeepep";
+		String y = "my pepeeepepe";
+		System.out.println(x == y);
+		y = "my pepeeepep";
+		System.out.println(x == y);
+	}
+}

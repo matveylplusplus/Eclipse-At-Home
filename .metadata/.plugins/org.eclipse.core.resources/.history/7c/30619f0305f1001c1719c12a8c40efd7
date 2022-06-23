@@ -1,0 +1,36 @@
+package cmsc131;
+
+import java.util.Scanner;
+
+public class Grade 
+{
+	public static void main(String[] Args)
+	{
+		int gr;
+		String letter;
+		Scanner ioo = new Scanner(System.in);
+		gr = ioo.nextInt();
+		
+		if(gr >= 90)
+		{
+			
+		}
+		else if (gr >= 80)
+		{
+			
+		}
+		else if (gr >= 80)
+		{
+			
+		}
+		else if (gr >= 80)
+		{
+			
+		}
+		else
+		{
+			
+		}
+	}
+	
+}

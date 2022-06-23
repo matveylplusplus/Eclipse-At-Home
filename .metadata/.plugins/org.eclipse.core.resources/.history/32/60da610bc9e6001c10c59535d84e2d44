@@ -1,0 +1,12 @@
+package test;
+
+public class Gen 
+{
+	public static void main (String[] Args)
+	{
+		int x = 34.7;
+		System.out.println(x);
+		double y = 12;
+		boolean q = 17 < 25;
+	}
+}

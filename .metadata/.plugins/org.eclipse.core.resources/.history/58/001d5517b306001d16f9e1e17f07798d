@@ -1,0 +1,41 @@
+package test;
+
+public class Gen extends Object implements interf1, interf2
+{	
+	public static int popo = 7;
+	public static void main (String[] Args)
+	{
+		Gen genny = new Gen();
+		genny.popo = 5; //accessing static int through instance of class; Java complains
+		popo = 5; //accessing static int outside of instance; best practice
+		System.out.println("great success");
+	}
+	
+	public Gen(boolean a, boolean b)
+	{
+		
+	}
+}
+
+class pizdec extends Gen
+{
+	boolean cheese;
+	
+	public void printContents()
+	{
+		System.out.println("salt = " + super.checkSalt());
+		System.out.println("pasta = " + super.checkPasta());
+		System.out.println("cheese = " + cheese);
+	}
+}
+
+interface interf1
+{
+	public int bobo = 6;
+}
+
+interface interf2
+{
+	public int bobo = 6;
+}
+

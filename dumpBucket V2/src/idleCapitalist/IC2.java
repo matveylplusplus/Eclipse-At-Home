@@ -11,7 +11,7 @@ public class IC2
 	private double rr;
 	private int a;
 	
-	IC2(double price, double income, double raterate, int amount)
+	public IC2(double price, double income, double raterate, int amount)
 	{
 		p = price;
 		i = income;

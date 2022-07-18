@@ -1,0 +1,37 @@
+package test;
+
+public class Gen
+{
+	public static void main (String[] Args)
+	{
+		Gen genny = new Gen();
+	}
+	
+	public Gen()
+	{
+		
+	}
+}
+
+class pizdec extends Gen
+{
+	boolean cheese;
+	public pizdec(boolean cheese)
+	{
+//		super(true, false);
+		System.out.println(super.checkPasta());
+		this.cheese = cheese;
+	}
+	public pizdec()
+	{
+		
+	}
+	
+	public void printContents()
+	{
+		System.out.println("salt = " + super.checkSalt());
+		System.out.println("pasta = " + super.checkPasta());
+		System.out.println("cheese = " + cheese);
+	}
+}
+

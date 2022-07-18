@@ -1,0 +1,58 @@
+package test;
+
+public class Gen extends Object implements interf1, interf2
+{	
+	public static int popo = 7;
+	public static void main (String[] Args)
+	{
+		int[] arr1; 
+		//Declaration: memory is allocated for reference value that links to (currently nonexistent) object in heap. This object's compile-time type is already known to be the reference type array, as indicated by '[]'; similar to a primitive in the sense that if compile-time type is array then run-time type CANNOT be different or can be considered to not exist at all
+		
+		//array ELEMENTS have their own compile/run-time types however. 'int' here indicates that every element will have compile-time type int.
+		
+		arr1 = new int[4]; 
+		//make every run-time type of the array int; this must be true by JLS or else compiler will ree
+		
+		Gen[] arr2;
+		arr2 = new Gen[4];
+		
+		Gen[] arr3 = {new Gen(), new pizdec()};
+		
+		Gen genny1 = new pizdec();
+		Gen[] arr4 = {genny1, new pizdec()}; // Compile-time type universal across array; equal to array of two Gen[] [name] = new pizdec;
+//		arr4[1].printGen();
+//		Gen newpis = new pizdec();
+//		newpis.printGen();
+	}
+	
+	public Gen()
+	{
+		
+	}
+	
+	public void printGen()
+	{
+		System.out.println("You are gen z");
+	}
+}
+
+class pizdec extends Gen
+{
+	boolean cheese;
+	
+	public void printContents()
+	{
+		System.out.println("cheese = " + cheese);
+	}
+}
+
+interface interf1
+{
+	public int bobo = 6;
+}
+
+interface interf2
+{
+	public int bobo = 6;
+}
+

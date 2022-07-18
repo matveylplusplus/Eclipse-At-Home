@@ -1,0 +1,45 @@
+package test;
+
+public class Gen extends Object implements interf1, interf2
+{	
+	public static int popo = 7;
+	public static void main (String[] Args)
+	{
+		int[] arr1; //compile-time type of array is int; 
+		arr1 = new int[4];
+		
+		Gen[] arr2;
+		arr2 = new Gen[4];
+		
+		Gen[] arr3 = {new Gen(), new pizdec()};
+		
+		Gen genny1 = new pizdec();
+		Gen[] arr4 = {genny1, new pizdec()};
+	}
+	
+	public Gen()
+	{
+		
+	}
+}
+
+class pizdec extends Gen
+{
+	boolean cheese;
+	
+	public void printContents()
+	{
+		System.out.println("cheese = " + cheese);
+	}
+}
+
+interface interf1
+{
+	public int bobo = 6;
+}
+
+interface interf2
+{
+	public int bobo = 6;
+}
+

@@ -1,33 +1,41 @@
 package test;
 
-import java.util.Scanner;
-
-public class Gen 
-{
+public class Gen extends Object implements interf1, interf2
+{	
+	public static int popo = 7;
 	public static void main (String[] Args)
 	{
-		int N = 19;
-		Scanner in = new Scanner(System.in);
 		
-		System.out.println("Numbers going up to " + N + " are " + upToN(N));
-		
-		in.close();
 	}
 	
-	public static int upToN(int n)
+	public Gen()
 	{
-		if(n == 1)
-			return n;
-		else
-			return upToN(n-1) + n;
+		
+	}
+	
+	public void printGen()
+	{
+		System.out.println("You are gen z");
 	}
 }
 
-class pizdec
+class pizdec extends Gen
 {
-	public pizdec()
+	boolean cheese;
+	
+	public void printContents()
 	{
-
+		System.out.println("cheese = " + cheese);
 	}
+}
+
+interface interf1
+{
+	public int bobo = 6;
+}
+
+interface interf2
+{
+	public int bobo = 6;
 }
 

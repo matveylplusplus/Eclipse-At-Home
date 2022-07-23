@@ -4,6 +4,8 @@ public class Wow
 {
 	public static void main(String[] args)
 	{
+		String str;
+		
 		int[] arr = new int[4];
 		print1D(arr);
 		

@@ -1,0 +1,59 @@
+package immutable;
+/*
+ *DO NOT CHANGE!!!!!!!!!!!!!!!!!!!!! 
+ *!!!!!!!!! 
+ *!!!!!!!!!!!
+ *!!!!!!!!!!!!
+ *I linked this on gitghub to illustrate a very important concept
+ */
+public class Parent extends Object
+{	
+	String IdentityStr;
+	public static void main (String[] Args)
+	{
+		Parent[] parray;//object of compile-time type array is declared, and memory is allocated for a reference value. This reference value currently does not exist, even in null form. "Parent" indicates that compile-time type of any future elements is going to be Parent; this is non-negotiable.
+//		System.out.println(parray);//doesn't compile; reference value isn't even initialized to null because parray is local
+		
+		parray = new Parent[3];
+		System.out.println(parray);//reference value is now initialized to point to array object in heap, whose elements are initialized to default values because the JLS says so (Section 4.12.5). Because elements were declared as compile-time type Parent (a reference type), and the default value for a reference type is null, every element is initialized to null
+		print1D(parray);//prints [null|null|null]
+		
+	}
+	
+	public static void print1D(Object[] arr)
+	{
+		System.out.print("[");
+		for(int i = 0; i < arr.length; i++)
+		{
+			if (i > 0)
+				System.out.print("|");
+			System.out.print(arr[i]);
+		}
+		System.out.print("]");
+	}
+	
+	public Parent()
+	{
+		IdentityStr = "Parent!";
+	}
+	
+	private void printParent()
+	{
+		System.out.println("You are Parent z");
+	}
+}
+
+class Child extends Parent
+{
+	boolean cheese;
+	
+	public Child()
+	{
+		IdentityStr = "Child!";
+	}
+	
+	public void printChild()
+	{
+		System.out.println("cheese = " + cheese);
+	}
+}

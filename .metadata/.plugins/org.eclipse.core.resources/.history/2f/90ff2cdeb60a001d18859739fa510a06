@@ -1,0 +1,45 @@
+package immutable;
+/*
+ *DO NOT CHANGE!!!!!!!!!!!!!!!!!!!!! 
+ *!!!!!!!!! 
+ *!!!!!!!!!!!
+ *!!!!!!!!!!!!
+ *I linked this on gitghub to illustrate a very important concept
+ */
+public class Parent extends Object
+{	
+	String IdentityStr;
+	public static void main (String[] Args)
+	{
+		Parent[] parray;//object of compile-time type array is declared, and memory is allocated for a reference value. This reference value currently does not exist, even in null form. "Parent" indicates that compile-time type of any future elements is going to be parent; this is non-negotiable.
+//		System.out.println(parray);//doesn't compile; reference value isn't even initialized to null because parray is local
+		
+		//Declaration: memory is allocated for reference value that links to (currently nonexistent) object in heap. This object's compile-time type is declared to be the reference type array, as indicated by '[]'; similar to a primitive in the sense that if compile-time type is array then run-time type CANNOT be different or can be considered to not exist at all. this is one of the reasons array is a special kind of object
+				//array ELEMENTS have their own compile/run-time types however. 'int' in the declaration indicates that every element will have compile-time type int.
+	}
+	
+	public Parent()
+	{
+		IdentityStr = "Parent!";
+	}
+	
+	private void printParent()
+	{
+		System.out.println("You are Parent z");
+	}
+}
+
+class Child extends Parent
+{
+	boolean cheese;
+	
+	public Child()
+	{
+		IdentityStr = "Child!";
+	}
+	
+	public void printChild()
+	{
+		System.out.println("cheese = " + cheese);
+	}
+}

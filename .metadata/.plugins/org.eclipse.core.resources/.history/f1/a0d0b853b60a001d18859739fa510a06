@@ -1,0 +1,42 @@
+package immutable;
+/*
+ *DO NOT CHANGE!!!!!!!!!!!!!!!!!!!!! 
+ *!!!!!!!!! 
+ *!!!!!!!!!!!
+ *!!!!!!!!!!!!
+ *I linked this on gitghub to illustrate a very important concept
+ */
+public class Parent extends Object
+{	
+	String IdentityStr;
+	public static void main (String[] Args)
+	{
+		Parent[] parray;
+		System.out.println(parray);
+	}
+	
+	public Parent()
+	{
+		IdentityStr = "Parent!";
+	}
+	
+	private void printParent()
+	{
+		System.out.println("You are Parent z");
+	}
+}
+
+class Child extends Parent
+{
+	boolean cheese;
+	
+	public Child()
+	{
+		IdentityStr = "Child!";
+	}
+	
+	public void printChild()
+	{
+		System.out.println("cheese = " + cheese);
+	}
+}

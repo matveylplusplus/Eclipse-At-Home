@@ -1,0 +1,38 @@
+package cmsc131;
+
+interface ShakesHands
+{
+	public void shakeHands(ShakesHands other);
+}
+
+public class Teacher implements ShakesHands
+{
+	public static void main(String[] args)
+	{
+		
+	}
+
+	@Override
+	public void shakeHands(ShakesHands other) 
+	{
+		
+	}
+}
+
+class Student implements ShakesHands
+{
+	@Override
+	public void shakeHands(ShakesHands other) 
+	{
+		
+	}
+}
+
+class Parent implements ShakesHands
+{
+	@Override
+	public void shakeHands(ShakesHands other) 
+	{
+		
+	}
+}

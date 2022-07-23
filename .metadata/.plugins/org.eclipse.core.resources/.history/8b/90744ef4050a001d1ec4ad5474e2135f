@@ -1,0 +1,39 @@
+package cmsc131;
+
+public class Rational implements Comparable<Rational>
+{
+	int numerator;
+	int denominator;
+	
+	public static void main(String[] args)
+	{
+		
+	}
+	
+	public Rational(int n, int d)
+	{
+		numerator = n;
+		denominator = d;
+	}
+	
+	@Override
+	public int compareTo(Object other) {
+		try {
+			Rational compare = (Rational) other;
+			if ((double) (compare.numerator / compare.denominator) > (double)(this.numerator / this.denominator))
+				return 1;
+			else if ((double) (compare.numerator / compare.denominator) == (double)(this.numerator / this.denominator))
+				return 0;
+			else
+				return -1;
+		}
+		catch(ClassCastException e){
+			throw new IllegalArgumentException();
+		}	
+	}
+}
+
+interface Comparable <T>
+{
+	public int compareTo(Object other);
+}

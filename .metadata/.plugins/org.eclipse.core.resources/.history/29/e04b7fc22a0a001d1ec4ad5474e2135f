@@ -1,0 +1,25 @@
+package cmsc131;
+
+import java.util.Scanner;
+
+public class TwoD 
+{
+	public static void main(String[] args)
+	{
+		Scanner in = new Scanner(System.in);
+		int outerLength;
+		
+		System.out.print("Please enter array size: ");
+		outerLength = in.nextInt();
+		
+		int[][] Arr = new int[outerLength][];
+		pyramidAlloc(Arr, outerLength);
+				
+		in.close();
+	}
+	
+	public static void pyramidAlloc(int[][] arr, int n)
+	{
+		
+	}
+}

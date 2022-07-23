@@ -1,0 +1,53 @@
+package cmsc131;
+
+public class Mutable 
+{
+	public static void main(String[] args)
+	{
+		StringBuffer[] SBArr = new StringBuffer[6];
+		StringBuffer[] SBArr2 = rCopySB(SBArr);
+	}
+	
+	public static StringBuffer[] rCopySB(StringBuffer[] strBuff)
+	{
+		return strBuff;
+	}
+	
+	public static StringBuffer[] shallowCopySB(StringBuffer[] strBuff)
+	{
+		int length = strBuff.length;
+		
+		StringBuffer[] newBuff = new StringBuffer[length];
+		for(int i = 0; i < length; i++)
+		{
+			newBuff[i] = strBuff[i];
+		}
+		
+		return newBuff;
+	}
+	
+	public static StringBuffer[] deepCopySB(StringBuffer[] strBuff)
+	{
+		int length = strBuff.length;
+		
+		StringBuffer[] newBuff = new StringBuffer[length];
+		
+		for (int i = 0; i < length; i++)
+		{
+			newBuff[i] = new StringBuffer(strBuff[i].toString());
+		}
+		return newBuff;
+	}
+	
+	public static void print1DBuff(StringBuffer[] strBuff)
+	{
+		System.out.print("[");
+		for(int i = 0; i < strBuff.length; i++)
+		{
+			if (i > 0)
+				System.out.print("|");
+			System.out.print(strBuff);
+		}
+		System.out.print("]");
+	}
+}

@@ -1,0 +1,24 @@
+package test;
+
+public class ParentC 
+{
+	//
+	private void ExclusiveParentMethod()
+	{
+		System.out.println("woow exclusive");
+	}
+	
+	public static void main(String[] args)
+	{
+		ParentDos Parent1 = (ChildDos) new ParentDos();//Run-time ClassCastException
+		ChildDos child3 = (ChildDos) new ParentDos();//Run-time ClassCastException
+		ChildC child1 = (ParentC) (new ParentC());//Compile-Time Error --> Type mismatch: cannot convert from ParentC to ChildC
+	    ChildC child2 = (ParentC) (new ChildC());//Compile-Time Error --> Type mismatch: cannot convert from ParentC to ChildC
+	}
+	//
+}
+
+class ChildC extends ParentC
+{
+	
+}

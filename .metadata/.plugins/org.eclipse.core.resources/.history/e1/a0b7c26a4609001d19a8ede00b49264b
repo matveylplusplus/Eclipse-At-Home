@@ -1,0 +1,17 @@
+package test;
+
+public class ParentC 
+{
+	//
+	public static void main(String[] args)
+	{
+		ChildC child1 = (ParentC) new ParentC();
+		ChildC child2 = (ParentC) new ChildC();
+	}
+	//
+}
+
+class ChildC extends ParentC
+{
+	
+}

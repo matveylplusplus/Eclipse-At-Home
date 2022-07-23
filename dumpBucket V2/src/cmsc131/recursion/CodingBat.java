@@ -4,7 +4,7 @@ public class CodingBat
 {
 	public static void main(String[] args)
 	{
-
+		System.out.println(CalcFact(3));
 	}
 	
 	public static int CalcFact(int N)
@@ -15,6 +15,7 @@ public class CodingBat
 			return 1;
 		else
 			return N * CalcFact(N-1);
+		
 	}
 	
 	public static int bunnyEars(int bunnies)

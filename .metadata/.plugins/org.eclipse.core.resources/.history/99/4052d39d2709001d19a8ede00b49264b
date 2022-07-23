@@ -1,0 +1,83 @@
+package test;
+
+public class ParentDos extends Object
+{	
+	String IdentityStr;
+	public static void main (String[] Args)
+	{
+		ParentDos Parent = (ParentDos) new ParentDos();
+//		ParentDos Parent1 = (ChildDos) new ParentDos();//Run-time error
+		ParentDos Parent2 = new ParentDos();
+		ParentDos Parent3 = new ChildDos();
+		ParentDos Parent4 = (ChildDos) new ChildDos();
+		ParentDos Parent5 = (ParentDos) new ChildDos();
+		
+		ChildDos childeronni = new ChildDos();
+//		ChildDos child1 = new ParentDos();//Compile-time Error
+		ChildDos child2 = (ChildDos) new ChildDos();
+		ChildDos child3 = (ChildDos) new ParentDos();
+//		ChildDos child4 = (ParentDos) new ParentDos();//Compile-time Error
+//		ChildDos child5 = (ParentDos) new ChildDos();//Compile-time Error
+		
+		
+		Parent.eat();
+		Parent1.eat();//cannot be tested due to run-time error during instantiation
+		Parent2.eat();
+		Parent3.eat();
+		Parent4.eat();
+		Parent5.eat();
+		
+		childeronni.eat();
+//		child1.eat();//cannot be tested due to compile-time error during instantiation
+		child2.eat();
+		child3.eat();
+//		child4.eat();//cannot be tested due to compile-time error during instantiation
+//		child5.eat();//cannot be tested due to compile-time error during instantiation
+		
+		
+//		Parent.shit();//Compile-time Error
+//		Parent1.shit();//Compile-time Error
+//		Parent2.shit();//Compile-time Error
+//		Parent3.shit();//Compile-time Error
+//		Parent4.shit();//Compile-time Error
+//		Parent5.shit();//Compile-time Error
+		
+		childeronni.shit();
+//		child1.shit();//cannot be tested due to compile-time error during instantiation
+		child2.shit();
+		child3.shit();
+//		child4.shit();//cannot be tested due to compile-time error during instantiation
+//		child5.shit();//cannot be tested due to compile-time error during instantiation
+		
+	}
+	
+	public ParentDos()
+	{
+		IdentityStr = "Parent!";
+	}
+	
+	public void eat()
+	{
+		System.out.println("yum yum");
+	}
+}
+
+class ChildDos extends ParentDos
+{
+	boolean cheese;
+	
+	public ChildDos()
+	{
+		IdentityStr = "Child!";
+	}
+	
+	public void shit()
+	{
+		System.out.println("pffffffffffffffffffffffffffffffffffbbbbbBBBBBBBBBBBBBBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAAA");
+	}
+	
+	public void eat()
+	{
+		System.out.println("OM NOM NOM NOMNO M");
+	}
+}

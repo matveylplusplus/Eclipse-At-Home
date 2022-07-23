@@ -1,0 +1,20 @@
+package cmsc131;
+
+public interface Animal 
+{
+	public String getName();
+	public void setName(String s);
+	public String makeSound();
+	public String toString();
+}
+
+class Cat
+{
+	private String name = 
+	public static void main(String[] args)
+	{
+		System.out.println("loool");
+	}
+	
+	
+}

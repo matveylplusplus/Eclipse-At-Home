@@ -1,0 +1,23 @@
+package general;
+
+public class ParentC 
+{
+	private void ExclusiveParentMethod()
+	{
+		System.out.println("woow exclusive");
+	}
+	
+	public static void main(String[] args)
+	{
+		ParentC Parent1 = (ChildC) new ParentC();//Runs fine
+		ParentC Parent2 = (ChildC) new ParentC();//Run-time Error --> java.lang.ClassCastException
+		ChildC child1 = (ChildC) new ParentC();//Run-time Error --> java.lang.ClassCastException
+		ChildC child2 = (ParentC) new ParentC();//Compile-Time Error --> Type mismatch: cannot convert from ParentC to ChildC
+	    ChildC child3 = (ParentC) new ChildC();//Compile-Time Error --> Type mismatch: cannot convert from ParentC to ChildC
+	}
+}
+
+class ChildC extends ParentC
+{
+	
+}

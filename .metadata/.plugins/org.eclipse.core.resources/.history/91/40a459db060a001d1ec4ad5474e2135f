@@ -1,0 +1,32 @@
+package cmsc131;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class RationalTest {
+
+	@Test
+	void ArgumentGreaterThanObject()
+	{
+		Rational r1 = new Rational(4, 5);
+		Rational r2 = new Rational(3, 1);
+		assertEquals(1, r1.compareTo(r2));
+	}
+	
+	void ArgumentLessThanObject()
+	{
+		
+	}
+	
+	void ArgumentEqualToObject()
+	{
+		
+	}
+	
+	void ArgumentNonsense()
+	{
+		
+	}
+
+}

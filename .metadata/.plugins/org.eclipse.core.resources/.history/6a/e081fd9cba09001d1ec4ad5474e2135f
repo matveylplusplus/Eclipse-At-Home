@@ -1,0 +1,15 @@
+package cmsc131.recursion;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+public class CodingBatTest 
+{
+	@Test
+	public void CalcFact()
+	{
+		int output = CodingBat.CalcFact(3);
+		assertEquals(6, output);
+	}
+}

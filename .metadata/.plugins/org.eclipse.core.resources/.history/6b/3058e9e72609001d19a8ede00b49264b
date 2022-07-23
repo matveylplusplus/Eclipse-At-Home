@@ -1,0 +1,69 @@
+package test;
+
+public class ParentDos extends Object
+{	
+	String IdentityStr;
+	public static void main (String[] Args)
+	{
+		ParentDos Parent = (ParentDos) new ParentDos();
+		ParentDos Parent1 = (ChildDos) new ParentDos();
+		ParentDos Parent2 = new ParentDos();
+		ParentDos Parent3 = new ChildDos();
+		ParentDos Parent4 = (ChildDos) new ChildDos();
+		ParentDos Parent5 = (ParentDos) new ChildDos();
+		
+		ChildDos childeronni = new ChildDos();
+		ChildDos child1 = new ParentDos();
+		ChildDos child2 = (ChildDos) new ChildDos();
+		ChildDos child3 = (ChildDos) new ParentDos();
+		
+		
+		Parent.eat();//Compile-time type = run-time type = ParentDos
+		Parent1.eat();//Compile-time type = ParentDos, run-time type = ChildDos
+		Parent2.eat();//Compile-time type = ParentDos, run-time type = ChildDos
+		Parent3.eat();
+		Parent4.eat();
+		childeronni.eat();//Compile-time type = ParentDos, run-time type = ChildDos
+		child1.eat();//Compile-time type = ParentDos, run-time type = ChildDos
+		
+		
+		Parent.shit();//Compile-time type = run-time type = ParentDos
+		Parent1.shit();//Compile-time type = ParentDos, run-time type = ChildDos
+		Parent2.shit();//Compile-time type = ParentDos, run-time type = ChildDos
+		Parent3.shit();//Compile-time type = ParentDos, run-time type = ChildDos\
+		Parent4.shit();
+		childeronni.shit();//Compile-time type = ParentDos, run-time type = ChildDos
+		child1.shit();//Compile-time type = ParentDos, run-time type = ChildDos\
+		
+	}
+	
+	public ParentDos()
+	{
+		IdentityStr = "Parent!";
+	}
+	
+	public void eat()
+	{
+		System.out.println("yum yum");
+	}
+}
+
+class ChildDos extends ParentDos
+{
+	boolean cheese;
+	
+	public ChildDos()
+	{
+		IdentityStr = "Child!";
+	}
+	
+	public void shit()
+	{
+		System.out.println("pffffffffffffffffffffffffffffffffffbbbbbBBBBBBBBBBBBBBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAAA");
+	}
+	
+	public void eat()
+	{
+		System.out.println("OM NOM NOM NOMNO M");
+	}
+}

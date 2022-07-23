@@ -1,0 +1,20 @@
+package cmsc131;
+
+public class Mutable 
+{
+	public static void main(String[] args)
+	{
+		StringBuffer[] SBArr = new StringBuffer[6];
+		StringBuffer[] SBArr2 = rCopySB(SBArr);
+	}
+	
+	public static StringBuffer[] rCopySB(StringBuffer[] strBuff)
+	{
+		return strBuff;
+	}
+	
+	public static StringBuffer[] shallowCopySB(StringBuffer[] strBuff)
+	{
+		int length = strBuff.length;
+	}
+}

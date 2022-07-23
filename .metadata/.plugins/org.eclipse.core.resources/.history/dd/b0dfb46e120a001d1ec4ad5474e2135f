@@ -1,0 +1,22 @@
+package cmsc131;
+
+public interface Animal 
+{
+
+}
+
+class Cat
+{
+	public static void main(String[] args)
+	{
+		System.out.println("loool");
+	}
+}
+
+class lol
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Heyyy");
+	}
+}

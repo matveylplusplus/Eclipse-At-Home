@@ -1,0 +1,69 @@
+package cmsc131;
+
+public interface Animal 
+{
+	public String getName();
+	public void setName(String s);
+	public String makeSound();
+	public String toString();
+}
+
+class Cat implements Animal
+{
+	private String name;
+	private int miceCaught;
+	public static void main(String[] args)
+	{
+		Cat Ronald = new Cat("Ronald");
+		System.out.println("Ronald's name = " + Ronald.getName());
+		
+		
+		Cat Ronald2 = new Cat(Ronald);
+		System.out.println("loool");
+	}
+	
+	public Cat(String n)
+	{
+		setName(n); 
+		setMouseCount(0);
+	}
+	
+	public Cat (Cat c)
+	{
+		setName(c.getName());
+		
+	}
+	
+	@Override
+	public String getName() 
+	{
+		return name;
+	}
+	
+	@Override
+	public void setName(String s) 
+	{
+		name = s;
+	}
+	
+	@Override
+	public String makeSound() 
+	{
+		return "MEEEEEEEEEEEEEEOOOOOOOOOOOOOOOOOOOOOOOO";
+	}
+	
+	public void caughtAnother()
+	{
+		setMouseCount(getMouseCount()+1);
+	}
+	
+	private void setMouseCount(int m)
+	{
+		miceCaught = m;
+	}
+	
+	public int getMouseCount()
+	{
+		return miceCaught;
+	}
+}

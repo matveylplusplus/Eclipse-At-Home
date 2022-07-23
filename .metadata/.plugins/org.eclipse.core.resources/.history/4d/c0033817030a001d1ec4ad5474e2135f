@@ -1,0 +1,17 @@
+package cmsc131;
+
+public class Rational implements Comparable
+{
+	int numerator;
+	int denominator;
+	
+	public static void main(String[] args)
+	{
+		
+	}
+}
+
+interface Comparable <T>
+{
+	public int compareTo(Object other);
+}

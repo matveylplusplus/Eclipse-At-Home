@@ -1,0 +1,23 @@
+package general;
+
+import java.util.Scanner;
+
+public class Gen
+{	
+	public static void main (String[] Args)
+	{
+		Scanner scoony = new Scanner(System.in);
+		
+		int n;
+		
+		System.out.print("Please enter integer N: ");
+		n = scoony.nextInt();
+		
+		scoony.close();
+	}
+	
+	public Gen()
+	{
+		
+	}
+}

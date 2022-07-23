@@ -1,0 +1,23 @@
+package cmsc131;
+
+public class Rational implements Comparable<Rational>
+{
+	int numerator;
+	int denominator;
+	
+	public static void main(String[] args)
+	{
+		
+	}
+
+	@Override
+	public int compareTo(Object other) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}
+
+interface Comparable <T>
+{
+	public int compareTo(Object other);
+}

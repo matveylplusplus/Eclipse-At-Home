@@ -1,0 +1,10 @@
+package cmsc131;
+
+public class Mutable 
+{
+	public static void main(String[] args)
+	{
+		String strOne = "Hello";
+		String strTwo = strOne;
+	}
+}

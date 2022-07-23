@@ -1,0 +1,24 @@
+package cmsc131;
+
+interface ShakesHands
+{
+	
+}
+
+public class Teacher 
+{
+	public static void main(String[] args)
+	{
+		
+	}
+}
+
+class Student
+{
+	
+}
+
+class Parent
+{
+	
+}

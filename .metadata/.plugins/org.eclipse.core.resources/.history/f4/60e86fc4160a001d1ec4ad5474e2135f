@@ -1,0 +1,14 @@
+package general;
+
+public class Gen
+{	
+	public static void main (String[] Args)
+	{
+		
+	}
+	
+	public Gen()
+	{
+		
+	}
+}

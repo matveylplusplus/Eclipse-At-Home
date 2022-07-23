@@ -1,0 +1,66 @@
+package general;
+
+import java.util.Scanner;
+
+public class Gen
+{	
+	public static void main (String[] Args)
+	{
+		Scanner scoony = new Scanner(System.in);
+		
+		int n;
+		
+		System.out.print("Please enter size of array N: ");
+		n = scoony.nextInt();
+		
+		int[] array = new int[n];
+		
+		BuildArray(array, scoony, n-1);
+		
+		
+		
+		scoony.close();
+	}
+	
+	public static void BuildArray(int[] arr, Scanner scon, int n)
+	{
+		if(n >= 0)
+		{
+			if(n > 0)
+				BuildArray(arr, scon, n-1);
+			System.out.print("Please enter element " + n + ": ");
+			arr[n] = scon.nextInt();
+		}
+		else
+		{
+			throw new IllegalArgumentException("n cannot be lower than 0 stupid asshole");
+		}
+	}
+	
+	public static void printArrayinReverse(int[] arr, int n)
+	{
+		if (n >= 0)
+		{
+			if (n > 0)
+			{
+				printArrayinReverse(arr, n);
+				System.out.print("|");
+			}
+			else if (n == 0)
+				System.out.print("[");
+			System.out.print(arr[n]);
+			
+			if(n == arr.length-1)
+				System.out.print("]");
+		}
+		else
+			throw new IllegalArgumentException("n canno tbe lowe lorthan 0")
+	}
+	
+	public Gen()
+	{
+		
+	}
+	
+	
+}

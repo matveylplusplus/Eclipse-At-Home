@@ -1,0 +1,47 @@
+package cmsc131;
+
+public interface Animal 
+{
+	public String getName();
+	public void setName(String s);
+	public String makeSound();
+	public String toString();
+}
+
+class Cat implements Animal
+{
+	private String name;
+	public static void main(String[] args)
+	{
+		Cat kitty = new Cat();
+		System.out.println("loool");
+	}
+	
+	public Cat(String n)
+	{
+		this.setName(n); 
+	}
+	
+	public void setName(String n)
+	{
+		name = n;
+	}
+	
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void setName(String s) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public String makeSound() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+}

@@ -1,0 +1,25 @@
+package test;
+
+public class ParentC 
+{
+	//
+	private void ExclusiveParentMethod()
+	{
+		System.out.println("woow exclusive");
+	}
+	
+	public static void main(String[] args)
+	{
+		ChildC child1 = (ParentC) new ParentC();
+		ChildC child2 = (ParentC) new ChildC();
+		ChildC child3 = new ChildC();
+		
+		((ParentC) child3).ExclusiveParentMethod();
+	}
+	//
+}
+
+class ChildC extends ParentC
+{
+	
+}

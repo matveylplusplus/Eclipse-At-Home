@@ -1,0 +1,77 @@
+package test;
+
+public class ParentDos extends Object
+{	
+	String IdentityStr;
+	public static void main (String[] Args)
+	{
+		ParentDos Parent = (ParentDos) new ParentDos();
+		ParentDos Parent1 = (ChildDos) new ParentDos();
+		ParentDos Parent2 = new ParentDos();
+		ParentDos Parent3 = new ChildDos();
+		ParentDos Parent4 = (ChildDos) new ChildDos();
+		ParentDos Parent5 = (ParentDos) new ChildDos();
+		
+		ChildDos childeronni = new ChildDos();
+		ChildDos child1 = new ParentDos();//Compile-time Error
+		ChildDos child2 = (ChildDos) new ChildDos();
+		ChildDos child3 = (ChildDos) new ParentDos();
+		ChildDos child4 = (ParentDos) new ParentDos();//Compile-time Error
+		ChildDos child5 = (ParentDos) new ChildDos();//Compile-time Error
+		
+		
+		Parent.eat();
+		Parent1.eat();
+		Parent2.eat();
+		Parent3.eat();
+		Parent4.eat();
+		Parent5.eat();
+		
+		childeronni.eat();
+		child1.eat();
+		child2.eat();
+		child3.eat();
+		child4.eat();
+		child5.eat();
+		
+		
+		Parent.shit();		
+		Parent1.shit();
+		Parent2.shit();
+		Parent3.shit();
+		Parent4.shit();
+		childeronni.shit();
+		child1.shit();
+		
+	}
+	
+	public ParentDos()
+	{
+		IdentityStr = "Parent!";
+	}
+	
+	public void eat()
+	{
+		System.out.println("yum yum");
+	}
+}
+
+class ChildDos extends ParentDos
+{
+	boolean cheese;
+	
+	public ChildDos()
+	{
+		IdentityStr = "Child!";
+	}
+	
+	public void shit()
+	{
+		System.out.println("pffffffffffffffffffffffffffffffffffbbbbbBBBBBBBBBBBBBBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAAA");
+	}
+	
+	public void eat()
+	{
+		System.out.println("OM NOM NOM NOMNO M");
+	}
+}

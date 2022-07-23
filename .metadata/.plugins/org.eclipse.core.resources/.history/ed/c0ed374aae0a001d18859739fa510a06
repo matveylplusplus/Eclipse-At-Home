@@ -1,0 +1,19 @@
+package general;
+
+public class Wow 
+{
+	public static void main(String[] args)
+	{
+		int[] arr = new int[4];
+	}
+	
+	public void print1D(int[] arr)
+	{
+		
+	}
+	
+	public void print1DObject(Object[] arr)
+	{
+		
+	}
+}

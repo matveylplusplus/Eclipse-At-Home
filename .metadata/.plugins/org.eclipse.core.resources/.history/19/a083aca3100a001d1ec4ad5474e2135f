@@ -1,0 +1,42 @@
+package general;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Gen <T>
+{	
+	T toPrint;
+//	Object toPrint2;
+	public static void main (String[] Args)
+	{
+		ArrayList<int> list = new ArrayList<>();
+		ArrayList listOne = new ArrayList();
+		   listOne.add(new StringBuffer("One"));
+		   listOne.add(new StringBuffer("Two"));
+		   listOne.add(new StringBuffer("Three"));
+
+		ArrayList listTwo = new ArrayList(listOne);
+		   listOne.add(new StringBuffer("Four"));
+		   for (StringBuffer str : listTwo) {
+		      str.append("2");
+		   } 
+
+		System.out.println("List One: " + listOne);
+		System.out.println("List Two: " + listTwo);
+	}
+	
+	public Gen()
+	{
+		
+	}
+	
+	public void print (Object obj)
+	{
+		System.out.println(obj.getClass() + " = " + obj);
+	}
+}
+
+interface popoo
+{
+	int age = 5;
+}

@@ -1,0 +1,106 @@
+package test;
+
+public class ParentDos extends Object
+{	
+	String IdentityStr;
+	public static void main (String[] Args)
+	{
+		ParentDos Parent3 = new ChildDos();//CTT = ParentDos, RTT = ChildDos
+		ChildDos childeronni = new ChildDos();//CTT = RTT = ChildDos
+		ChildDos child2 = (ChildDos) new ChildDos();//CTT = RTT = ChildDos
+//		ChildDos child1 = new ParentDos();//Compile-time Error: Run-time type higher than compile-time type
+		
+		ParentDos Parent5 = (ParentDos) new ChildDos();//CTT = ParentDos, RTT = ChildDos
+		ParentDos Parent1 = (ChildDos) new ParentDos();//Run-time ClassCastException; Typecast CTT is below current CTT in the inheritance path, so I promise obj's run time type is ChildDos...mwahaha
+		ChildDos child3 = (ChildDos) new ParentDos();//Run-time ClassCastException; Typecast CTT is below current CTT in the inheritance path, so I promise obj's run time type is ChildDos...mwahaha
+		ChildDos child4 = (ParentDos) new ParentDos();//Compile-time Error; Typecast CTT is above current CTT in the inheritance path, so it can't 
+		ChildDos child5 = (ParentDos) new ChildDos();//Compile-time Error
+		
+		((ParentDos)childeronni).eat();//Typecast CTT is above current CTT in the inheritance path, so this is upcast: this always works
+		
+		((ChildDos)Parent3).shit();//Typecast CTT is below current CTT in the inheritance path, so this is downcast: Java, I promise Parent3's run-time type is ChildDos...
+		
+		Object obj = new Object();
+		
+		((ChildDos)obj).shit();//Typecast CTT is below current CTT in the inheritance path, so I promise obj's run time type is ChildDos...mwahaha
+		
+		((String)childeronni).eat();//Typecast CTT isn't in the same inheritance path as current CTT, so compiler catches this
+		
+		System.out.print("parent = ");
+//		Parent.eat();
+		System.out.println();
+//		Parent1.eat();//cannot be tested due to run-time error during instantiation
+		System.out.print("parent2 = ");
+//		Parent2.eat();
+		System.out.println();
+		
+		System.out.print("parent3 = ");
+		Parent3.eat();
+		System.out.println();
+		
+		System.out.print("parent4 = ");
+//		Parent4.eat();
+		System.out.println();
+		
+		System.out.print("parent5 = ");
+		Parent5.eat();
+		System.out.println();
+		
+		System.out.print("childreonni = ");
+		childeronni.eat();
+		System.out.println();
+//		child1.eat();//cannot be tested due to compile-time error during instantiation
+		System.out.print("child2 = ");
+		child2.eat();
+		System.out.println();
+//		child3.eat();//cannot be tested due to run-time error during instantiation
+//		child4.eat();//cannot be tested due to compile-time error during instantiation
+//		child5.eat();//cannot be tested due to compile-time error during instantiation
+		
+		
+//		Parent.shit();//Compile-time Error
+//		Parent1.shit();//Compile-time Error
+//		Parent2.shit();//Compile-time Error
+//		Parent3.shit();//Compile-time Error
+//		Parent4.shit();//Compile-time Error
+//		Parent5.shit();//Compile-time Error
+		
+		childeronni.shit();
+//		child1.shit();//cannot be tested due to compile-time error during instantiation
+		child2.shit();
+//		child3.shit();//cannot be tested due to run-time error during instantiation
+//		child4.shit();//cannot be tested due to compile-time error during instantiation
+//		child5.shit();//cannot be tested due to compile-time error during instantiation
+		
+	}
+	
+	public ParentDos()
+	{
+		IdentityStr = "Parent!";
+	}
+	
+	public void eat()
+	{
+		System.out.println("yum yum");
+	}
+}
+
+class ChildDos extends ParentDos
+{
+	boolean cheese;
+	
+	public ChildDos()
+	{
+		IdentityStr = "Child!";
+	}
+	
+	public void shit()
+	{
+		System.out.println("pffffffffffffffffffffffffffffffffffbbbbbBBBBBBBBBBBBBBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAAA");
+	}
+	
+	public void eat()
+	{
+		System.out.println("OM NOM NOM NOMNO M");
+	}
+}
